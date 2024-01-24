@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/triangular.png" alt="Logo" width="80" height="80">
+    <img src="company-img/new-logo-2.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center" >The project to get job at TheRaven</h3>
