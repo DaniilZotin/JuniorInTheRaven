@@ -1,7 +1,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://theraven.tech/#contact-us">
     <img src="company-img/new-logo-2-.png" alt="Logo" width="300" height="80">
   </a>
 
