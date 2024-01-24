@@ -5,7 +5,7 @@
     <img src="images/triangular.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">The project to get job at TheRaven</h3>
+  <h3 align="center" >The project to get job at TheRaven</h3>
 
   <p align="center">
     Here you can see description about the program😉
@@ -26,38 +26,37 @@
 Here I will demonstrate the decisions I made while completing the task.
 
 ## About the project 
+
 A system for working with users that has the following endpoints:
-1. <span style="color:green">POST</span> /api/customers - Create customer
-2. GET /api/customers - Read all customers
-3. GET /api/customers/{id} - Read customer
-4. Put /api/customers/{id} - Update customer
-5. Delete /api/customers/{id} - Delete customer
+1. $\color{#E3C678}{{POST}}$  /api/customers - Create customer
+2. $\color{#55AE5B}{{GET}}$ /api/customers - Read all customers
+3. $\color{#55AE5B}{{GET}}$ /api/customers/{id} - Read customer
+4. $\color{#706CD4}{{PUT}}$ /api/customers/{id} - Update customer
+5. $\color{#FF0000}{{DELETE}}$ /api/customers/{id} - Delete customer
 
 
 
 ## Build with
 * [![Spring][Spring]][Spring-url]
-* [![PayPal][PayPal]][PayPal-url]
 * [![Java][Java]][Java-url]
-* [![Css][Css]][Css-url]
-* [![Html][Html]][Html-url]
-* [![Thymeleaf][Thymeleaf]][Thymeleaf-url]
+
 
 ## Preview
-### Log in page 
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/d0b138b0-dcaa-4ab1-b0ea-25d83e9626b6)
-### Main (part 1) 
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/4e055b84-8198-402e-a4f9-a8edf53e302a)
-### Main (part 2) 
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/4cf310b9-6f7f-4057-9832-d6ed32ef96e2)
-### List of clothes
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/2dd90744-8abd-460a-8790-c369a4cf5144)
-### Description 
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/a133d5c3-db44-4142-a856-11ae29567ead)
-### Basket
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/48668e3d-07c7-4c18-8d97-0ba800e06650)
-### PayPal
-![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/49b0577c-4e22-43e1-a7e3-374449b58bb2)
+### Create customer  
+![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/e0a5b1d7-d516-4ffb-a208-6f02c1ea448e)
+### Get customers
+![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/cad6953c-946a-4113-9a4a-6498d0edbc20)
+
+### Get customer 
+![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/e9608476-2e7f-44d4-846f-1b330272e099)
+
+### Update customer
+![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/22dc1ef4-7432-4188-916f-ab29a27a0087)
+
+### Delete customer
+![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/a6d46be3-405e-4a5b-b502-d83032e69912)
+
+
 
 
 
