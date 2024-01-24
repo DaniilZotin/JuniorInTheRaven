@@ -23,7 +23,12 @@
 
 
 ## Introduction 
-Here I will demonstrate the decisions I made while completing the task.
+Hello, my name is Daniil, I really want to work in your company as a developer, I specializing in Java and Java EE design 
+and development for one year, have experience in 
+creating new projects and supporting existing ones. I know that the competition is very strong, so I am making maximum efforts.
+
+### VinWolves the best )
+
 
 ## About the project 
 
@@ -52,6 +57,8 @@ A system for working with users that has the following endpoints:
 ![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/e9608476-2e7f-44d4-846f-1b330272e099)
 
 ### Update customer
+I implemented the following logic: The user cannot change the id because it can lead to data inconsistency. 
+Therefore, the id in the url must match the id in the json          
 ![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/22dc1ef4-7432-4188-916f-ab29a27a0087)
 
 ### Delete customer
@@ -92,18 +99,11 @@ select * from customers;
 ### Instalation 
 1. Clone the repo
    ```sh
-   git clone https://github.com/DaniilZotin/Clothing-store-project.git
+     https://github.com/DaniilZotin/JuniorInTheRaven.git
    ```
-2. Change DB
-   ![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/6bc40be9-9617-4722-bf0d-31e54ee840b0)
-3. Change mail(you must generate own mail host, find tutorial)
-   ![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/d9e89af5-1e19-4162-a659-0da69b292236)
-4. If you want to interact with your PayPal edit this field
-   ![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/b9144e0b-2647-41ad-862c-19ce0c4a18d0)
-5. Set your localhost in PayPal controller
-   ![image](https://github.com/DaniilZotin/Clothing-store-project/assets/85665335/2f87947b-fd2c-4e2a-9182-7993bab3573d)
-6. Insert tables and data in it
-   later I will add files with tables
+2. Change DB      
+   ![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/10b0b078-1762-4bbd-bda0-b58e67dced90)
+3. Insert data 
 8. Build project
    
 
