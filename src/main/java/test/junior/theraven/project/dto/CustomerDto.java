@@ -1,14 +1,13 @@
-package test.junior.theraven.project.dao;
+package test.junior.theraven.project.dto;
 
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import test.junior.theraven.project.entities.Customer;
 
 @Data
 @AllArgsConstructor
-public class CustomerDaoAdmin {
+public class CustomerDto {
 
     private Long id;
 
@@ -20,8 +19,8 @@ public class CustomerDaoAdmin {
     private String phone;
 
 
-    public static CustomerDaoAdmin mapToCustomerDaoAdmin (Customer customer){
+    public static CustomerDto mapToCustomerDaoAdmin (Customer customer){
 
-        return new CustomerDaoAdmin(customer.getId(),customer.getFull_name(), customer.getEmail() , customer.getPhone() );
+        return new CustomerDto(customer.getId(),customer.getFull_name(), customer.getEmail() , customer.getPhone() );
     }
 }

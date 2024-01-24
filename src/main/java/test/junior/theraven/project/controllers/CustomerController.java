@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import test.junior.theraven.project.dao.CustomerDaoAdmin;
+import test.junior.theraven.project.dto.CustomerDto;
 import test.junior.theraven.project.exeptions.IdAreNotEqualsException;
 import test.junior.theraven.project.services.CustomerService;
 
@@ -21,8 +21,8 @@ public class CustomerController {
     private final CustomerService customerService;
 
     @PostMapping("customers")
-    public ResponseEntity<CustomerDaoAdmin> createCustomer(@Valid @RequestBody CustomerDaoAdmin customerDaoAdmin) {
-        CustomerDaoAdmin newCustomer = customerService.createCustomer(customerDaoAdmin);
+    public ResponseEntity<CustomerDto> createCustomer(@Valid @RequestBody CustomerDto customerDto) {
+        CustomerDto newCustomer = customerService.createCustomer(customerDto);
 
         log.info("Was created new customer: {} ", newCustomer);
         return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
@@ -30,9 +30,9 @@ public class CustomerController {
     }
 
     @GetMapping("customers")
-    public ResponseEntity<List<CustomerDaoAdmin>> getCustomers(){
+    public ResponseEntity<List<CustomerDto>> getCustomers(){
 
-        List<CustomerDaoAdmin> customers = customerService.getCustomers();
+        List<CustomerDto> customers = customerService.getCustomers();
 
         if(customers!=null){
             log.info("List of customers is not null");
@@ -44,13 +44,13 @@ public class CustomerController {
 
 
     @GetMapping("customers/{id}")
-    public ResponseEntity<CustomerDaoAdmin> getCustomer(@PathVariable("id") Long id){
+    public ResponseEntity<CustomerDto> getCustomer(@PathVariable("id") Long id){
 
         if(id == null){
             throw new NullPointerException("Your id is null");
         }
 
-        CustomerDaoAdmin customerById = customerService.getCustomerById(id);
+        CustomerDto customerById = customerService.getCustomerById(id);
 
         log.info("Customer by id {} ", customerById);
 
@@ -60,14 +60,14 @@ public class CustomerController {
 
 
     @PutMapping("customers/{id}")
-    public ResponseEntity<CustomerDaoAdmin> upgradeCustomer(@PathVariable("id") Long id,
-                                                            @Valid @RequestBody CustomerDaoAdmin customerDaoAdmin){
-        if(id != customerDaoAdmin.getId()){
+    public ResponseEntity<CustomerDto> updateCustomer(@PathVariable("id") Long id,
+                                                       @Valid @RequestBody CustomerDto customerDto){
+        if(id != customerDto.getId()){
 
             throw new IdAreNotEqualsException("Id must be equals, if not it can be problem in DB");
         }
 
-        CustomerDaoAdmin updatedCustomer = customerService.updateCustomer(customerDaoAdmin);
+        CustomerDto updatedCustomer = customerService.updateCustomer(customerDto);
 
         log.info("Updated customer {} ", updatedCustomer);
 

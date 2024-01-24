@@ -1,18 +1,18 @@
 package test.junior.theraven.project.services;
 
-import test.junior.theraven.project.dao.CustomerDaoAdmin;
+import test.junior.theraven.project.dto.CustomerDto;
 
 import java.util.List;
 
 public interface CustomerService {
 
-    CustomerDaoAdmin createCustomer(CustomerDaoAdmin customerDaoAdmin);
+    CustomerDto createCustomer(CustomerDto customerDto);
 
-    List<CustomerDaoAdmin> getCustomers();
+    List<CustomerDto> getCustomers();
 
-    CustomerDaoAdmin getCustomerById(Long id);
+    CustomerDto getCustomerById(Long id);
 
-    CustomerDaoAdmin updateCustomer(CustomerDaoAdmin customerDaoAdmin);
+    CustomerDto updateCustomer(CustomerDto customerDto);
 
     void deleteCustomerById(Long id);
 }
