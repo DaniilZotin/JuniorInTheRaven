@@ -50,7 +50,11 @@ public class CustomerController {
             throw new NullPointerException("Your id is null");
         }
 
-        return new ResponseEntity<>(customerService.getCustomerById(id), HttpStatus.OK);
+        CustomerDaoAdmin customerById = customerService.getCustomerById(id);
+
+        log.info("Customer by id {} ", customerById);
+
+        return new ResponseEntity<>(customerById, HttpStatus.OK);
 
     }
 
@@ -63,9 +67,11 @@ public class CustomerController {
             throw new IdAreNotEqualsException("Id must be equals, if not it can be problem in DB");
         }
 
+        CustomerDaoAdmin updatedCustomer = customerService.updateCustomer(customerDaoAdmin);
 
+        log.info("Updated customer {} ", updatedCustomer);
 
-        return new ResponseEntity<>(customerService.updateCustomer(customerDaoAdmin), HttpStatus.OK);
+        return new ResponseEntity<>(updatedCustomer, HttpStatus.OK);
     }
 
 
@@ -74,6 +80,8 @@ public class CustomerController {
     public ResponseEntity<String> deleteCustomer(@PathVariable("id") Long id){
 
         customerService.deleteCustomerById(id);
+
+        log.info("Customer with id {} was deleted", id);
 
         return new ResponseEntity<>("You have deleted customer with id: " + id, HttpStatus.OK);
     }
