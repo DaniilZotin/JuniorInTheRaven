@@ -1,7 +1,7 @@
 
 <br />
 <div align="center">
-  <a href="https://theraven.tech/#contact-us">
+  <a href="https://theraven.tech/">
     <img src="company-img/new-logo-2-.png" alt="Logo" width="300" height="80">
   </a>
 
