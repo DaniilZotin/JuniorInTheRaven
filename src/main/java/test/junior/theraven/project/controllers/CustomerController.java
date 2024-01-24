@@ -2,6 +2,7 @@ package test.junior.theraven.project.controllers;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,22 +15,30 @@ import java.util.List;
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
+@Slf4j
 public class CustomerController {
 
     private final CustomerService customerService;
 
     @PostMapping("customers")
     public ResponseEntity<CustomerDaoAdmin> createCustomer(@Valid @RequestBody CustomerDaoAdmin customerDaoAdmin) {
+        CustomerDaoAdmin newCustomer = customerService.createCustomer(customerDaoAdmin);
 
-        return new ResponseEntity<>(customerService.createCustomer(customerDaoAdmin), HttpStatus.CREATED);
+        log.info("Was created new customer: {} ", newCustomer);
+        return new ResponseEntity<>(newCustomer, HttpStatus.CREATED);
 
     }
 
     @GetMapping("customers")
     public ResponseEntity<List<CustomerDaoAdmin>> getCustomers(){
 
+        List<CustomerDaoAdmin> customers = customerService.getCustomers();
 
-        return new ResponseEntity<>(customerService.getCustomers(), HttpStatus.OK);
+        if(customers!=null){
+            log.info("List of customers is not null");
+        }
+
+        return new ResponseEntity<>(customers, HttpStatus.OK);
 
     }
 
