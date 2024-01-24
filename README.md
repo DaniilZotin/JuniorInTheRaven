@@ -39,6 +39,7 @@ A system for working with users that has the following endpoints:
 ## Build with
 * [![Spring][Spring]][Spring-url]
 * [![Java][Java]][Java-url]
+* [![MySQL][MySQL]][MySQL-url]
 
 
 ## Preview
@@ -57,17 +58,37 @@ A system for working with users that has the following endpoints:
 ![image](https://github.com/DaniilZotin/JuniorInTheRaven/assets/85665335/a6d46be3-405e-4a5b-b502-d83032e69912)
 
 
+## DB
+```sh
+create database clientDB;
+use clientDB;
+
+
+CREATE TABLE IF NOT EXISTS customers (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    created BIGINT NOT NULL,
+    updated BIGINT NOT NULL,
+    full_name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone VARCHAR(20),
+    is_active BOOLEAN NOT NULL
+);
+
+
+INSERT INTO customers (created, updated, full_name, email, phone, is_active)
+VALUES
+    (UNIX_TIMESTAMP(NOW() - INTERVAL 1 DAY), UNIX_TIMESTAMP(), 'John Doe', 'john.doe@example.com', '+380501234567', true),
+    (UNIX_TIMESTAMP(NOW() - INTERVAL 2 DAY), UNIX_TIMESTAMP(), 'Jane Smith', 'jane.smith@example.com', '+380961638509', true),
+    (UNIX_TIMESTAMP(NOW() - INTERVAL 3 DAY), UNIX_TIMESTAMP(), 'Bob Johnson', 'bob.johnson@example.com', '+380992094351', false),
+    (UNIX_TIMESTAMP(NOW() - INTERVAL 4 DAY), UNIX_TIMESTAMP(), 'Alice Williams', 'alice.williams@example.com', '+380960039598', true),
+    (UNIX_TIMESTAMP(NOW() - INTERVAL 5 DAY), UNIX_TIMESTAMP(), 'Charlie Brown', 'charlie.brown@example.com', '+380988230569', true);
+
+select * from customers;
+```
 
 
 
 
-
-
-
-
-
-## Getting Started
-To get a local copy up and running follow these simple example steps.
 ### Instalation 
 1. Clone the repo
    ```sh
@@ -96,17 +117,9 @@ To get a local copy up and running follow these simple example steps.
 [Spring]: https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white
 [Spring-url]: https://spring.io/projects/spring-framework
 
-[Thymeleaf]: https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white
-[Thymeleaf-url]: https://spring.io/projects/spring-framework
+[MySQL]: https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://spring.io/projects/spring-framework
 
 [Java]: https://img.shields.io/badge/Java-E02027?style=for-the-badge&logo=jameson&logoColor=white
 [Java-url]: https://spring.io/projects/spring-framework
 
-[Css]: https://img.shields.io/badge/Css-1572B6?style=for-the-badge&logo=CSS3&logoColor=white
-[Css-url]: https://spring.io/projects/spring-framework
-
-[Html]: https://img.shields.io/badge/Html-E34F26?style=for-the-badge&logo=HTML5&logoColor=white
-[Html-url]: https://spring.io/projects/spring-framework
-
-[PayPal]: https://img.shields.io/badge/PayPal-003087?style=for-the-badge&logo=PayPal&logoColor=white
-[PayPal-url]: https://spring.io/projects/spring-framework
