@@ -5,10 +5,10 @@
     <img src="images/triangular.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">My clothing store project</h3>
+  <h3 align="center">The project to get job at TheRaven</h3>
 
   <p align="center">
-    Here you can see description about program and stepts how to clone it😉
+    Here you can see description about the program😉
     <br />
     
   </p>
@@ -23,20 +23,17 @@
 
 
 ## Introduction 
-I studied Java for about 4 months, but I didn't see results, so I sat down and thought about what 
-I could do to feel like a full-fledged Java developer. 
-And then I came up with the idea to make this project, without tutorials, from scratch
+Here I will demonstrate the decisions I made while completing the task.
 
 ## About the project 
-Implementation of an online clothing store. Main functionalities:
-1. Viewing products
-2. Selection of goods to the basket
-3. Removing goods from the basket
-4. Registration in the system and receiving a message by mail (email integration)
-5. Purchase of goods using PayPal
-6. Checking whether the product is available
+A system for working with users that has the following endpoints:
+1. <span style="color:green">POST</span> /api/customers - Create customer
+2. GET /api/customers - Read all customers
+3. GET /api/customers/{id} - Read customer
+4. Put /api/customers/{id} - Update customer
+5. Delete /api/customers/{id} - Delete customer
 
-This is my first project, so the code here is terrible, but I'm learning and the main idea was to make a full project and deploy it
+
 
 ## Build with
 * [![Spring][Spring]][Spring-url]
