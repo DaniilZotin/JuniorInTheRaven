@@ -55,16 +55,15 @@ public class CustomerServiceImpl implements CustomerService {
 
         System.out.println(existCustomer);
 
-//        Customer updatedCustomer = new Customer();
         existCustomer.setUpdated(System.currentTimeMillis());
         existCustomer.setPhone(customerDaoAdmin.getPhone());
 
         existCustomer.setFull_name(customerDaoAdmin.getFullName());
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        String formattedDateTime = dateFormat.format(new Date(existCustomer.getUpdated()));
-
-        System.out.println(formattedDateTime);
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+//        String formattedDateTime = dateFormat.format(new Date(existCustomer.getUpdated()));
+//
+//        System.out.println(formattedDateTime);
 
 
         Customer updatedCustomer = customerRepository.save(existCustomer);
