@@ -25,9 +25,7 @@
 ## Introduction 
 Hello, my name is Daniil, I really want to work in your company as a developer, I specializing in Java and Java EE design 
 and development for one year, have experience in 
-creating new projects and supporting existing ones. I know that the competition is very strong, so I am making maximum efforts.
-
-### VinWolves the best )
+creating new projects and supporting existing ones.
 
 
 ## About the project 
